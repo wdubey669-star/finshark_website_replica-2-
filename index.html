@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FinShark – Dive into the Right Financial Choice in the UAE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#f7fcff;--mist:#e8f6fb;--sky:#dcecff;--lil:#ece8ff;--sand:#fff3e6;--pink:#ffe6ec;--mint:#def7ea;
+--ink:#14283f;--mute:#5a6e85;--line:#dfebf5;--blue:#2f8fe8;--teal:#25b5c0;--vio:#8c7cf5;--r:28px;--sh:0 18px 40px -22px rgba(47,100,170,.45);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}html{scroll-behavior:smooth;scroll-padding-top:96px}
+html{background:#f8fcff}body{margin:0;font-family:'Nunito Sans',system-ui,sans-serif;color:var(--ink);background:transparent;line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:Outfit,sans-serif;line-height:1.08;margin:0;letter-spacing:-.025em}p{margin:0}a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid #8fc2ff;outline-offset:3px;border-radius:12px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 22px}section{padding:96px 0;position:relative}
+#glow{position:fixed;width:420px;height:420px;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(120,190,255,.28),transparent 65%);translate:-50% -50%;left:-999px;top:0}
+#aur{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}#aur i{position:absolute;border-radius:50%;background:var(--c);filter:blur(90px);opacity:.5;animation:drift 26s ease-in-out infinite alternate}
+@keyframes drift{to{translate:6vw 8vh;scale:1.18}}
+.fc,.lk,.pf,.w,.art,.js,.cb,.pn,.cp,.q,.mini div{background:rgba(255,255,255,.78);backdrop-filter:blur(14px);border-color:rgba(255,255,255,.95)}
+.st h2{background:linear-gradient(120deg,#14283f 30%,#2a5fa8 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+#bar{position:fixed;left:0;top:0;height:4px;width:0;z-index:120;background:linear-gradient(90deg,var(--teal),var(--blue),var(--vio))}
+/* nav */
+.nav{position:fixed;z-index:90;left:50%;top:calc(14px + env(safe-area-inset-top,0px));translate:-50% 0;width:min(1120px,calc(100% - 24px));display:flex;align-items:center;justify-content:space-between;padding:8px 10px 8px 22px;border-radius:999px;background:rgba(255,255,255,.72);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.9);box-shadow:var(--sh);transition:transform .5s,background .3s}
+.nav.hide{transform:translateY(-130%)}
+.logo{font:800 1.5rem Outfit;display:flex;gap:8px;align-items:center}.logo b{color:var(--blue)}.logo svg{width:28px;height:28px}
+.links{display:flex;gap:6px;align-items:center}.links a:not(.btn){padding:8px 16px;border-radius:99px;font-weight:700;font-size:.94rem;color:var(--mute);transition:.25s}.links a:not(.btn):hover,.links a.on{background:var(--mist);color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 26px;border-radius:99px;font:700 1rem 'Nunito Sans';border:1.5px solid transparent;cursor:pointer;transition:box-shadow .3s,background .3s,border-color .3s;position:relative;overflow:hidden;will-change:transform}
+.btn.p{background:linear-gradient(135deg,#3a9bf0,#5fc4d8);color:#fff;box-shadow:0 14px 26px -12px rgba(47,143,232,.8)}
+.btn.p::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.6) 50%,transparent 65%);translate:-130% 0;transition:translate .8s}.btn.p:hover::after{translate:130% 0}
+.btn.g{background:#fff;border-color:var(--line)}.btn.g:hover{border-color:#9ccaf6;box-shadow:var(--sh)}.btn.sm{padding:9px 20px;font-size:.92rem}
+#bg{display:none;width:44px;height:44px;border-radius:50%;border:0;background:var(--mist);font-size:1.2rem;cursor:pointer}
+/* hero */
+.hero{padding:150px 0 90px}
+.hg{display:grid;grid-template-columns:1.05fr 1fr;gap:50px;align-items:center}
+.hero h1{font-size:clamp(2.3rem,5vw,4.4rem);font-weight:800}
+.rot{display:block;height:1.15em;overflow:hidden;color:var(--blue);line-height:1.15}.trk{display:block;will-change:transform}.trk b{display:block;height:1.15em;line-height:1.15;white-space:nowrap;font-weight:800}
+.hero h1 small.s{display:block;font:700 .4em/1.3 Outfit;margin-top:10px;color:var(--ink);-webkit-text-fill-color:currentColor}
+.lead{color:var(--mute);font-size:1.1rem;max-width:480px;margin:22px 0 28px}
+.seg{display:inline-flex;background:rgba(255,255,255,.8);border:1px solid var(--line);border-radius:99px;padding:5px;margin-bottom:24px;box-shadow:var(--sh)}
+.seg button{border:0;background:none;padding:9px 18px;border-radius:99px;font:700 .9rem 'Nunito Sans';color:var(--mute);cursor:pointer;transition:.3s}.seg button.on{background:var(--ink);color:#fff}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.stage{position:relative;height:clamp(470px,50vw,590px);border-radius:44px;overflow:hidden;isolation:isolate;touch-action:pan-y;box-shadow:0 44px 70px -36px rgba(60,90,190,.55);border:2px solid rgba(255,255,255,.9)}
+.sl{position:absolute;inset:0;display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:opacity .8s,visibility 0s .8s}.sl.on{opacity:1;visibility:visible;transition-delay:0s}
+.sl:nth-child(1){background:linear-gradient(160deg,#d6ebff,#eef6ff 60%,#d9f4f8)}.sl:nth-child(2){background:linear-gradient(160deg,#ffefd3,#ffe3ec 70%,#f3e9ff)}.sl:nth-child(3){background:linear-gradient(160deg,#e5dcff,#d7f3f7 70%,#eaf8ff)}
+.vis{position:relative;flex:1 1 58%;min-height:0}.sl .tx{padding:6px 150px 34px 34px;position:relative;z-index:3}
+.sl h3{font-size:clamp(1.6rem,2.8vw,2.3rem)}.sl p{color:var(--mute);margin:6px 0 16px}
+.tag{position:absolute;top:38px;left:30px;background:#fff;border-radius:99px;padding:5px 15px;font-weight:700;font-size:.8rem;box-shadow:var(--sh);z-index:3}
+.cw{position:absolute;width:52%;rotate:var(--r);opacity:0;translate:var(--ex,-60px) 40px;transition:opacity .8s,translate 1.1s cubic-bezier(.2,.9,.3,1)}.sl.on .cw{opacity:1;translate:0 0}
+.cw.a{left:9%;top:18%;--r:-7deg;z-index:2}.cw.b{right:7%;top:36%;--r:7deg;--ex:60px;transition-delay:.15s}
+.cd{width:100%;aspect-ratio:1.6;border-radius:20px;padding:6.5%;color:#fff;font:700 clamp(.7rem,1.4vw,.95rem) Outfit;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;
+background:radial-gradient(circle at 88% 12%,rgba(255,255,255,.42),transparent 46%),radial-gradient(circle at 8% 110%,rgba(255,255,255,.28),transparent 50%),var(--g);box-shadow:0 30px 40px -20px rgba(30,50,120,.55);animation:bob 6s ease-in-out infinite;transform:translate(var(--px,0),var(--py,0))}
+.cw.b .cd{animation-delay:-3s}.cd .br{font-size:1.2em;letter-spacing:.04em}.cd .chp{width:2.2em;height:1.65em;border-radius:.45em;background:linear-gradient(135deg,#f9e2a3,#d9b45e)}.cd .nm{letter-spacing:.2em;font-weight:500}.cd .nt{font-size:.75em;opacity:.9}
+.cd::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.38) 50%,transparent 70%);animation:shn 5s ease-in-out infinite}@keyframes shn{0%,60%{translate:-100% 0}100%{translate:100% 0}}
+.fch{position:absolute;background:rgba(255,255,255,.93);border-radius:16px;padding:8px 14px;font-weight:700;font-size:.78rem;box-shadow:var(--sh);animation:bob 5s ease-in-out infinite;z-index:3}
+.story{position:absolute;top:16px;left:30px;right:30px;display:flex;gap:6px;z-index:5}.story i{flex:1;height:4px;border-radius:9px;background:rgba(255,255,255,.8);overflow:hidden}.story i b{display:block;height:100%;width:0;background:var(--blue)}.story i.done b{width:100%}.story i.on b{animation:fill 5s linear forwards}.stage:hover .story i.on b{animation-play-state:paused}
+@keyframes fill{to{width:100%}}
+.nx{position:absolute;bottom:30px;width:42px;height:42px;border-radius:50%;border:0;background:rgba(255,255,255,.9);box-shadow:var(--sh);cursor:pointer;z-index:6;font-size:1.2rem;transition:scale .25s}.nx:hover{scale:1.12}.nx.l{right:80px}.nx.r{right:28px}
+.bub{position:absolute;bottom:-40px;border-radius:50%;border:1.5px solid rgba(255,255,255,.9);background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.9),rgba(255,255,255,.15));animation:rise linear infinite;pointer-events:none}
+@keyframes rise{to{translate:var(--dx,20px) -115vh;opacity:.3}}
+.hero .bubs{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+/* load orchestration */
+.ld{opacity:0;translate:0 30px;filter:blur(8px);animation:in .9s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:var(--d,0s)}@keyframes in{to{opacity:1;translate:0;filter:none}}
+.rv{opacity:0;translate:0 34px;transition:opacity .8s,translate .9s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}.rv.in{opacity:1;translate:0}
+/* titles */
+.ey{display:inline-flex;align-items:center;gap:8px;background:var(--mist);color:#1b7fcf;font-weight:700;font-size:.85rem;padding:5px 14px;border-radius:99px;margin-bottom:14px}
+.st{max-width:720px;margin-bottom:44px}.st h2{font-size:clamp(2rem,4vw,3.2rem)}.st p{color:var(--mute);margin-top:14px}.ctr{text-align:center;margin-inline:auto}
+/* explore showcase */
+.tabs{position:relative;display:flex;gap:4px;padding:7px;border-radius:99px;background:rgba(255,255,255,.72);backdrop-filter:blur(14px);border:1.5px solid rgba(255,255,255,.95);box-shadow:var(--sh);overflow-x:auto;scrollbar-width:none;margin-bottom:22px;width:max-content;max-width:100%}.tabs::-webkit-scrollbar{display:none}
+.tb{position:relative;z-index:1;flex:none;display:flex;align-items:center;gap:8px;padding:11px 18px;border:0;background:none;border-radius:99px;font:700 .95rem 'Nunito Sans';color:var(--mute);cursor:pointer;transition:color .3s}
+.tb .e{font-size:1.15rem;transition:transform .5s cubic-bezier(.3,1.7,.4,1)}.tb.on{color:var(--ink)}.tb.on .e{transform:scale(1.28) rotate(-8deg)}.tb:hover{color:var(--ink)}
+.ind{position:absolute;z-index:0;top:7px;bottom:7px;left:0;width:0;border-radius:99px;background:#fff;box-shadow:0 8px 22px -10px rgba(47,100,200,.6);transition:left .6s cubic-bezier(.3,1.2,.3,1),width .6s cubic-bezier(.3,1.2,.3,1)}
+.exs{position:relative;display:grid;border-radius:44px;overflow:hidden;touch-action:pan-y;box-shadow:0 46px 70px -40px rgba(60,100,190,.55);border:1.5px solid rgba(255,255,255,.95)}
+.ep{grid-area:1/1;display:grid;grid-template-columns:1.05fr 1fr;gap:20px;align-items:center;padding:clamp(28px,4.5vw,58px) clamp(24px,4.5vw,58px) clamp(48px,5vw,64px);opacity:0;visibility:hidden;scale:1.035;transition:opacity .7s,scale .9s cubic-bezier(.2,.8,.2,1),visibility 0s .7s}
+.ep.on{opacity:1;visibility:visible;scale:1;transition-delay:0s}
+.ep .t>*{opacity:0;translate:0 22px;transition:opacity .6s,translate .7s cubic-bezier(.2,.8,.2,1)}.ep.on .t>*{opacity:1;translate:0}.ep.on .t>*:nth-child(2){transition-delay:.1s}.ep.on .t>*:nth-child(3){transition-delay:.2s}.ep.on .t>*:nth-child(4){transition-delay:.3s}.ep.on .t>*:nth-child(5){transition-delay:.4s}
+.ep h3{font-size:clamp(2rem,4vw,3.2rem);margin:12px 0}.ep .t p{color:var(--mute);max-width:430px}
+.hl{list-style:none;padding:0;margin:18px 0 26px;display:flex;flex-wrap:wrap;gap:8px}.hl li{background:rgba(255,255,255,.85);border-radius:99px;padding:7px 15px;font-weight:700;font-size:.85rem;box-shadow:0 8px 16px -12px rgba(40,80,160,.6)}
+.ct{display:inline-block;background:rgba(255,255,255,.88);border-radius:99px;padding:4px 14px;font-weight:700;font-size:.8rem}
+.vz{position:relative;aspect-ratio:1;max-width:370px;width:78%;margin:auto;display:grid;place-items:center}
+.vz .rg{position:absolute;inset:0;border-radius:50%;border:2px dashed rgba(255,255,255,.95);animation:spin 30s linear infinite}.vz .rg.b{inset:15%;animation-direction:reverse;animation-duration:22s;border-style:solid;border-color:rgba(255,255,255,.65)}
+.vz .core{width:56%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 30% 25%,#fff,rgba(255,255,255,.55));display:grid;place-items:center;font-size:clamp(3.4rem,8vw,6.2rem);box-shadow:0 30px 60px -26px rgba(50,90,190,.6),inset 0 0 30px #fff;animation:bob 5s ease-in-out infinite;transform:perspective(700px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .2s}
+.o{position:absolute;inset:0;animation:spin 24s linear infinite;animation-delay:calc(var(--k)*-8s)}.o .ch{position:absolute;left:50%;top:0;translate:-50% -50%;white-space:nowrap;background:rgba(255,255,255,.95);border-radius:16px;padding:8px 14px;font-weight:700;font-size:.8rem;box-shadow:var(--sh);animation:spin 24s linear infinite reverse;animation-delay:calc(var(--k)*-8s)}
+.pg{position:absolute;right:24px;top:20px;font:700 .85rem Outfit;color:var(--mute);background:rgba(255,255,255,.85);border-radius:99px;padding:4px 14px;z-index:3}
+.pbar{position:absolute;left:0;bottom:0;height:5px;width:0;background:linear-gradient(90deg,var(--teal),var(--blue),var(--vio));z-index:4;animation:fill 7s linear forwards}.exw:hover .pbar{animation-play-state:paused}
+.a2{position:absolute;right:24px;bottom:22px;display:flex;gap:8px;z-index:4}.a2 button{width:42px;height:42px;border-radius:50%;border:0;background:rgba(255,255,255,.92);box-shadow:var(--sh);cursor:pointer;font-size:1.1rem;transition:scale .25s}.a2 button:hover{scale:1.12}
+@media(max-width:820px){.ep{grid-template-columns:1fr;gap:6px;padding-top:56px}.vz{order:-1;width:min(60%,240px);margin:18px auto 30px}.ep .t p{max-width:none}.a2{display:none}}
+@media(max-width:600px){.tb{padding:10px 14px;font-size:.88rem}.ep h3{font-size:1.9rem}}
+.look{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:70px}
+.lk{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:10px;transition:.4s;position:relative;overflow:hidden;isolation:isolate}
+.lk::before{content:"";position:absolute;inset:auto -30% -70% -30%;height:100%;border-radius:50%;background:var(--c);z-index:-1;transition:transform .7s cubic-bezier(.2,.8,.2,1);transform:translateY(60%)}.lk:hover::before{transform:translateY(0)}
+.lk:hover{transform:translateY(-6px);box-shadow:var(--sh)}.lk p{color:var(--mute);font-size:.93rem}.lk .i{font-size:2rem}
+.mo{font-weight:700;color:var(--blue);margin-top:auto;padding-top:10px}.mo span{display:inline-block;transition:translate .3s}.lk:hover .mo span,.art:hover .mo span{translate:7px 0}
+/* waves */
+.band{background:linear-gradient(180deg,var(--mist),#f3fafd)}
+.band::before,.band::after{content:"";position:absolute;left:0;right:0;height:60px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60'%3E%3Cpath d='M0 30Q150 0 300 30T600 30T900 30T1200 30V60H0Z' fill='%23e8f6fb'/%3E%3C/svg%3E") repeat-x;background-size:1200px 60px;animation:wv 18s linear infinite;top:-59px}
+.band::after{top:auto;bottom:-59px;scale:1 -1;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60'%3E%3Cpath d='M0 30Q150 0 300 30T600 30T900 30T1200 30V60H0Z' fill='%23f3fafd'/%3E%3C/svg%3E");animation-direction:reverse}
+@keyframes wv{to{background-position-x:1200px}}
+/* featured cards */
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:99px;padding:9px 18px;font:700 .92rem 'Nunito Sans';cursor:pointer;transition:.3s;color:var(--mute)}.chip:hover{border-color:#9ccaf6;color:var(--ink)}.chip.on{background:var(--ink);border-color:var(--ink);color:#fff;transform:scale(1.05)}
+.rail{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 4px 36px;scrollbar-width:thin;scrollbar-color:#b9d9f5 transparent;cursor:grab}.rail.dr{cursor:grabbing;scroll-snap-type:none}
+.fc{flex:0 0 min(310px,82%);scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px;display:flex;flex-direction:column;gap:12px;transition:transform .2s,opacity .5s,box-shadow .3s;transform-style:preserve-3d}
+.fc.out{display:none}.fc:hover{box-shadow:0 30px 44px -26px rgba(47,100,170,.6)}
+.pl{aspect-ratio:1.6;border-radius:18px;padding:14px 16px;color:#fff;font:700 .85rem Outfit;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.pl::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.45) 50%,transparent 65%);translate:-110% 0;transition:translate .9s}.fc:hover .pl::after{translate:110% 0}
+.fc h4{font-size:1.15rem}.d{color:var(--mute);font-size:.88rem}
+.kv{display:flex;justify-content:space-between;border-top:1px dashed var(--line);padding-top:12px;font-size:.78rem;color:var(--mute)}.kv b{display:block;color:var(--ink);font-size:1rem;font-family:Outfit}
+.of{border-radius:16px;padding:12px 14px;background:linear-gradient(135deg,var(--lil),var(--mist));font-size:.92rem;font-weight:700}.of small{display:block;font-size:.66rem;color:var(--blue);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.kr{font-size:.84rem;color:var(--mute)}.kr b{display:block;color:var(--ink);font-size:.78rem}.act{display:flex;gap:8px;margin-top:auto}.act .btn{flex:1;padding:11px 8px;font-size:.88rem}
+.none{display:none;text-align:center;color:var(--mute);padding:30px;width:100%}
+.prefs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px}
+.pf{background:#fff;border:1px solid var(--line);border-radius:24px;padding:26px 10px;text-align:center;font-weight:700;cursor:pointer;transition:.4s;font-family:inherit;font-size:1rem;color:var(--ink)}
+.pf span{display:block;font-size:2.1rem;margin-bottom:6px;transition:transform .5s cubic-bezier(.3,1.7,.4,1)}.pf:hover{background:var(--c);transform:translateY(-6px);border-color:transparent}.pf:hover span{transform:scale(1.35) rotate(-10deg)}
+/* big scenes */
+.scene{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}.scene.rev{grid-template-columns:1.25fr 1fr}
+.pic{position:relative;border-radius:44px;overflow:visible}.pic svg.bg{display:block;width:100%;height:auto;border-radius:44px;box-shadow:0 44px 70px -38px rgba(50,90,170,.6)}
+.fl{position:absolute;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-radius:20px;padding:12px 18px;box-shadow:var(--sh);font-size:.78rem;color:var(--mute);animation:bob 5s ease-in-out infinite}.fl b{display:block;font:800 1.5rem Outfit;color:var(--ink)}
+@keyframes bob{50%{translate:0 -12px}}
+.mini{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}.mini div{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;display:flex;gap:12px;align-items:center;font-weight:700;font-size:.92rem;transition:.35s}.mini div:hover{translate:6px 0;box-shadow:var(--sh)}.mini em{font-style:normal;width:40px;height:40px;border-radius:13px;background:var(--lil);display:grid;place-items:center;flex:none}
+.ticks{list-style:none;padding:0;margin:16px 0 24px;display:grid;gap:10px;color:var(--mute)}.ticks li{padding-left:32px;position:relative}.ticks li::before{content:"✓";position:absolute;left:0;top:1px;width:22px;height:22px;border-radius:50%;background:var(--mint);color:#1b8a55;font-size:.75rem;font-weight:800;display:grid;place-items:center}
+.pn{background:#fff;border:1px solid var(--line);border-radius:32px;padding:32px;box-shadow:var(--sh)}.pn h3{font-size:1.7rem;margin:12px 0 8px}
+.steam{animation:stm 3s ease-in-out infinite;transform-origin:center bottom}@keyframes stm{0%{opacity:0;translate:0 8px}50%{opacity:.8}100%{opacity:0;translate:0 -14px}}
+.leaf{transform-origin:90px 330px;animation:sway 6s ease-in-out infinite}@keyframes sway{50%{rotate:3deg}}
+/* calculators */
+.cg{display:grid;grid-template-columns:1fr 1.25fr;gap:24px;align-items:start}
+.cl{display:grid;gap:12px}.cb{display:flex;gap:14px;align-items:center;background:#fff;border:1.5px solid var(--line);border-radius:22px;padding:14px 18px;text-align:left;cursor:pointer;font-family:inherit;color:var(--ink);transition:.35s}
+.cb:hover{translate:6px 0}.cb.on{border-color:#7fb8f2;box-shadow:var(--sh);background:linear-gradient(135deg,#fff,var(--mist))}.cb .i{width:46px;height:46px;border-radius:15px;display:grid;place-items:center;font-size:1.3rem;flex:none;background:var(--lil)}.cb b{display:block;font-size:.98rem}.cb small{color:var(--mute)}
+.cp{background:#fff;border:1px solid var(--line);border-radius:34px;padding:32px;box-shadow:var(--sh);position:sticky;top:100px}
+.cp h3{font-size:1.5rem}.sr{margin-top:16px}.sr label{display:flex;justify-content:space-between;font-weight:700;font-size:.92rem}.sr label span{color:var(--blue)}
+input[type=range]{width:100%;accent-color:var(--blue);margin:8px 0 0}
+.out{margin-top:24px;border-radius:26px;padding:26px;background:linear-gradient(135deg,var(--lil),var(--mist));text-align:center}.out b{display:block;font:800 clamp(2rem,5vw,3rem) Outfit}.out small{color:var(--mute)}
+.pb{height:12px;border-radius:99px;background:#fff;margin:14px 0 8px;overflow:hidden}.pb i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--teal),var(--blue),var(--vio));transition:width .7s cubic-bezier(.2,.8,.2,1)}
+/* journey */
+.jr{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.jl{position:absolute;left:0;right:0;top:46px;height:6px;z-index:0}.jl path{fill:none;stroke:#b9dcf7;stroke-width:3;stroke-dasharray:8 10;stroke-linecap:round}
+.js{position:relative;z-index:1;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:60px 26px 28px;text-align:center;transition:.4s}.js:hover{translate:0 -8px;box-shadow:var(--sh)}
+.js .n{position:absolute;top:-20px;left:50%;translate:-50% 0;width:76px;height:76px;border-radius:50%;display:grid;place-items:center;font:800 1.8rem Outfit;color:#fff;background:linear-gradient(135deg,var(--blue),var(--teal));box-shadow:0 14px 28px -10px rgba(47,143,232,.7);transition:.5s}.js:hover .n{rotate:360deg}
+.js h3{font-size:1.45rem;margin-bottom:10px}.js p{color:var(--mute);font-size:.95rem}
+/* why */
+.wy{display:grid;grid-template-columns:1fr 1.1fr 1fr;gap:22px;align-items:center}
+.wc{display:grid;gap:22px}.w{background:#fff;border:1px solid var(--line);border-radius:26px;padding:22px;transition:.45s cubic-bezier(.2,.8,.2,1);position:relative}.w:hover{translate:0 -6px;box-shadow:var(--sh);border-color:#9ccaf6}
+.w .i{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;font-size:1.3rem;margin-bottom:10px}.w h4{font-size:1.1rem}.w p{color:var(--mute);font-size:.9rem;margin-top:4px}
+.aq{position:relative;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 28%,#fff,#d9f1f8 45%,#cfe3ff);box-shadow:inset 0 0 60px rgba(255,255,255,.9),0 40px 70px -30px rgba(47,120,200,.55);overflow:hidden;display:grid;place-items:center}
+.aq::before{content:"";position:absolute;inset:-6%;border-radius:50%;border:2px dashed rgba(47,143,232,.35);animation:spin 40s linear infinite}@keyframes spin{to{rotate:360deg}}
+.aq svg{width:76%;position:relative;z-index:2;animation:bob 5s ease-in-out infinite}.fin{transform-origin:100% 0;animation:wave 2.4s ease-in-out infinite}@keyframes wave{50%{rotate:14deg}}
+.aq .bub{border-color:#fff}
+/* articles */
+.ar{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.art{background:#fff;border:1px solid var(--line);border-radius:32px;overflow:hidden;transition:.5s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column}.art:hover{translate:0 -10px;box-shadow:0 34px 50px -30px rgba(47,100,170,.6)}
+.th{height:200px;position:relative;overflow:hidden;display:grid;place-items:center}.th span{font-size:5rem;transition:transform .7s cubic-bezier(.3,1.5,.4,1);position:relative;z-index:1}.art:hover .th span{transform:scale(1.25) rotate(-8deg)}
+.th i{position:absolute;border-radius:50%;background:rgba(255,255,255,.55);animation:bob 6s ease-in-out infinite}
+.art .b{padding:24px;display:flex;flex-direction:column;gap:10px;flex:1}.tg{align-self:flex-start;background:var(--mist);color:#1b7fcf;font-weight:700;font-size:.78rem;padding:4px 13px;border-radius:99px}.art h3{font-size:1.25rem}.art p{color:var(--mute);font-size:.92rem}.art small{color:var(--mute)}
+/* faq */
+.fq{max-width:820px;margin:0 auto}.fs{width:100%;border:1.5px solid var(--line);background:#fff;border-radius:99px;padding:15px 24px;font:inherit;margin-bottom:18px;box-shadow:var(--sh)}.fs:focus{outline:none;border-color:#8fc2ff;box-shadow:0 0 0 5px rgba(143,194,255,.3)}
+.q{background:#fff;border:1px solid var(--line);border-radius:22px;margin-bottom:12px;transition:.4s}.q.open{border-color:#9ccaf6;box-shadow:var(--sh)}.q.hid{display:none}
+.q button{all:unset;box-sizing:border-box;width:100%;cursor:pointer;padding:19px 24px;display:flex;justify-content:space-between;gap:14px;font-weight:700}.q button:focus-visible{outline:3px solid #8fc2ff;outline-offset:-3px;border-radius:22px}
+.q svg{flex:none;color:var(--blue);transition:rotate .45s}.q.open svg{rotate:180deg}.an{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s cubic-bezier(.2,.8,.2,1)}.q.open .an{grid-template-rows:1fr}.an div{overflow:hidden}.an p{padding:0 24px 22px;color:var(--mute)}
+/* footer */
+footer{position:relative;background:linear-gradient(180deg,#f3fafd,var(--sky));padding:80px 0 34px;margin-top:40px}
+.fg{display:grid;grid-template-columns:repeat(5,1fr);gap:26px}.fg h4{font-size:1.05rem;margin-bottom:14px}.fg a{display:block;color:var(--mute);font-size:.93rem;padding:4px 0;transition:.25s}.fg a:hover{color:var(--blue);translate:5px 0}
+.nl{margin-top:50px;border-radius:34px;background:#fff;padding:26px 32px;display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap;box-shadow:var(--sh)}
+.nl form{display:flex;gap:8px;flex:1;min-width:260px;max-width:430px}.nl input{flex:1;min-width:0;border:1.5px solid var(--line);border-radius:99px;padding:13px 20px;font:inherit;background:var(--bg)}.nl input:focus{outline:none;border-color:#8fc2ff;box-shadow:0 0 0 4px rgba(143,194,255,.3)}
+.soc{display:flex;gap:10px;align-items:center;color:var(--mute);font-size:.9rem}.soc a{width:42px;height:42px;border-radius:50%;background:var(--mist);display:grid;place-items:center;font-weight:800;font-size:.8rem;color:var(--ink);transition:.4s cubic-bezier(.3,1.6,.4,1)}.soc a:hover{background:var(--blue);color:#fff;translate:0 -6px;rotate:-10deg}
+.cp2{text-align:center;color:var(--mute);font-size:.85rem;margin-top:30px}
+#top{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));width:52px;height:52px;border-radius:50%;border:0;background:#fff;box-shadow:var(--sh);cursor:pointer;z-index:80;font-size:1.2rem;scale:0;transition:scale .4s cubic-bezier(.3,1.6,.4,1)}#top.on{scale:1}
+#toast{position:fixed;left:50%;bottom:calc(26px + env(safe-area-inset-bottom,0px));translate:-50% 160px;background:var(--ink);color:#fff;padding:13px 24px;border-radius:99px;transition:translate .5s cubic-bezier(.2,1.3,.3,1);z-index:200}#toast.on{translate:-50% 0}
+@media(max-width:1020px){.look,.prefs{grid-template-columns:repeat(2,1fr)}.fg{grid-template-columns:repeat(3,1fr)}.wy{grid-template-columns:1fr 1fr}.aq{grid-column:1/-1;order:-1;max-width:420px;margin:auto;width:100%}.ar{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:820px){section{padding:70px 0}.hero{padding-top:120px}.hg,.scene,.scene.rev,.cg,.jr{grid-template-columns:1fr}.scene .pic{order:-1}.cp{position:static}.jl{display:none}.jr{gap:44px}
+ #bg{display:block}.links{position:absolute;top:calc(100% + 10px);left:0;right:0;flex-direction:column;align-items:stretch;background:#fff;border-radius:28px;padding:14px;box-shadow:var(--sh);opacity:0;pointer-events:none;translate:0 -10px;transition:.35s}.links.open{opacity:1;pointer-events:auto;translate:0}.links a:not(.btn){padding:12px 16px}}
+@media(max-width:600px){.look,.wy,.ar,.mini{grid-template-columns:1fr}.prefs{grid-template-columns:repeat(2,1fr)}.fg{grid-template-columns:repeat(2,1fr)}.fl{scale:.8;transform-origin:left top}.fch{display:none}.sl .tx{padding:4px 22px 84px}.cw.a{top:26%}.cw.b{top:44%}.nx{bottom:22px}.nx.l{right:72px}.nx.r{right:20px}.tag{left:20px}.stage{height:560px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}html{scroll-behavior:auto}.rv,.ld{opacity:1;translate:0;filter:none}}
+</style>
+</head>
+<body>
+<div id="aur"><i style="--c:#bfe3ff;left:-8%;top:4%;width:46vw;height:46vw"></i><i style="--c:#e1d8ff;right:-10%;top:18%;width:42vw;height:42vw;animation-delay:-6s"></i><i style="--c:#ffdccb;left:20%;top:52%;width:38vw;height:38vw;animation-delay:-12s"></i><i style="--c:#c6f2e0;right:6%;top:78%;width:36vw;height:36vw;animation-delay:-3s"></i></div><div id="bar"></div><div id="glow"></div>
+<header class="nav" id="nav">
+  <a class="logo" href="#home" aria-label="FinShark home"><svg viewBox="0 0 40 40"><path d="M3 31C5 14 18 4 37 6c-5 5-7 12-6 19-6-3-12-3-17 2-3 3-7 4-11 4z" fill="#2f8fe8"/><circle cx="26" cy="14" r="2" fill="#fff"/></svg>Fin<b>Shark</b></a>
+  <button id="bg" aria-label="Menu" aria-expanded="false">☰</button>
+  <nav class="links" id="links"><a href="#cards">Credit Cards</a><a href="#loans">Personal Loans</a><a href="#bank">Bank Accounts</a><a href="#articles">Articles</a><a class="btn p sm" data-mag href="#cards">Find My Card</a></nav>
+</header>
+<main id="home">
+<section class="hero"><div class="bubs" id="hb"></div><div class="wrap hg">
+  <div>
+    <div class="seg ld" style="--d:.05s" id="seg" role="group" aria-label="Choose a product"><button class="on" data-i="3">Cards</button><button data-i="2">Loans</button><button data-i="4">Accounts</button></div>
+    <h1 class="ld" style="--d:.15s">Find the right<span class="rot" aria-live="off"><span class="trk" id="trk"><b>Car Loan</b><b>Home Loan</b><b>Personal Loan</b><b>Credit Card</b><b>Bank Account</b></span></span><small class="s">for your needs in the UAE.</small></h1>
+    <p class="lead ld" style="--d:.3s">Find your options, select what fits, apply with confidence – everything you need to make the right financial decision in the UAE.</p>
+    <div class="cta ld" style="--d:.45s"><a class="btn p" data-mag href="#loans">Apply Now</a><a class="btn g" data-mag href="#cards">Find My Card</a></div>
+  </div>
+  <div class="stage ld" style="--d:.35s" id="stage" aria-roledescription="carousel" aria-label="Featured credit cards"><div class="story" id="story"></div><div id="slides"></div><button class="nx l" aria-label="Previous slide">‹</button><button class="nx r" aria-label="Next slide">›</button></div>
+</div></section>
+
+<section style="padding-top:20px"><div class="wrap">
+  <div class="st rv"><span class="ey">🧭 Explore financial products</span><h2>Pick a category and dive in</h2></div>
+  <div class="exw rv"><div class="tabs" id="tabs" role="tablist" aria-label="Financial product categories"><i class="ind" id="ind"></i></div><div class="exs" id="exs"><span class="pg" id="pg">1 / 7</span><i class="pbar" id="pbar"></i><div class="a2"><button id="exprev" aria-label="Previous category">‹</button><button id="exnext" aria-label="Next category">›</button></div></div></div>
+  <div class="look" id="look"></div>
+</div></section>
+
+<section class="band" id="cards"><div class="wrap" id="featured">
+  <div class="st rv"><span class="ey">💳 Credit cards</span><h2>Featured Credit Cards in UAE</h2><p>Explore rewards cards from leading UAE banks and compare annual fees, minimum income requirements and rewards across cashback, travel, dining and everyday spending categories.</p></div>
+  <div class="chips" id="chips"></div>
+  <div class="rail" id="rail"></div>
+</div></section>
+
+<section id="prefs"><div class="wrap">
+  <div class="st rv"><span class="ey">🎯 Explore by preference</span><h2>Find Credit Cards Based on What Matters to You</h2><p>Every UAE credit card is built around something different. Explore cashback and rewards cards for everyday spending, travel & miles cards for frequent flyers, or low-fee options if keeping costs down matters most.</p></div>
+  <div class="prefs" id="pf"></div>
+</div></section>
+
+<section class="band" id="loans"><div class="wrap scene">
+  <div class="rv"><span class="ey">💸 Personal loans</span><h2 style="font-size:clamp(2rem,4vw,3.2rem)">Personal Loans in UAE</h2>
+    <p style="color:var(--mute);margin-top:14px">Explore personal loan options from UAE banks and compare key factors such as minimum salary requirements, interest rates and repayment periods. FinShark’s tools also cover car loan and home loan financing, so you can weigh the right type of borrowing before applying.</p>
+    <div class="mini"><div><em>⚖️</em>Compare Personal Loans</div><div><em>🛡️</em>Understand Eligibility</div><div><em>🧮</em>Calculate EMI</div><div><em>🚗</em>Car & Home Loans</div></div>
+    <div class="cta"><a class="btn p" data-mag href="#calc">Explore Personal Loans</a><a class="btn g" data-mag href="#calc">Calculate EMI</a></div></div>
+  <div class="pic rv" style="--d:.15s" data-par>
+    <svg class="bg" viewBox="0 0 600 500" role="img" aria-label="Illustration: a man reviewing loan papers at his laptop">
+      <defs><linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9ecff"/><stop offset="1" stop-color="#ece6ff"/></linearGradient><linearGradient id="lg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfe4f7"/><stop offset="1" stop-color="#e9f3fb"/></linearGradient></defs>
+      <rect width="600" height="500" fill="url(#lg1)"/><circle cx="470" cy="110" r="130" fill="#fff" opacity=".55"/>
+      <g opacity=".9"><rect x="360" y="60" width="60" height="230" rx="6" fill="url(#lg2)"/><rect x="430" y="100" width="50" height="190" rx="6" fill="url(#lg2)"/><rect x="490" y="40" width="70" height="250" rx="6" fill="url(#lg2)"/><rect x="368" y="80" width="10" height="12" fill="#fff"/><rect x="500" y="64" width="10" height="12" fill="#fff"/><rect x="520" y="64" width="10" height="12" fill="#fff"/></g>
+      <rect y="380" width="600" height="120" fill="#f3e3cd"/><rect y="380" width="600" height="10" fill="#e6d0b4"/>
+      <path d="M95 400C92 310 135 280 195 280S298 310 295 400Z" fill="#fff" stroke="#dbe6f3" stroke-width="3"/><path d="M175 282l20 44 20-44" fill="none" stroke="#dbe6f3" stroke-width="3"/>
+      <rect x="178" y="250" width="34" height="38" rx="12" fill="#e0ae88"/>
+      <ellipse cx="195" cy="215" rx="42" ry="46" fill="#e8b891"/>
+      <path d="M148 222C138 160 252 160 242 222L234 240C238 196 152 196 156 240Z" fill="#fff" stroke="#e1eaf4" stroke-width="3"/><path d="M150 176C170 192 222 192 240 176" fill="none" stroke="#1d2433" stroke-width="7" stroke-linecap="round"/>
+      <path d="M160 238C166 280 224 280 230 238C216 256 174 256 160 238Z" fill="#3b2b24"/><circle cx="180" cy="218" r="4" fill="#1d2433"/><circle cx="210" cy="218" r="4" fill="#1d2433"/><path d="M184 246q11 7 22 0" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <g style="transform-origin:300px 340px;animation:bob 4s ease-in-out infinite"><rect x="262" y="290" width="76" height="96" rx="6" fill="#fff" stroke="#d9e5f2" stroke-width="2" transform="rotate(-8 300 340)"/><g stroke="#b9d3ee" stroke-width="4" stroke-linecap="round" transform="rotate(-8 300 340)"><path d="M274 308h40M274 322h30M274 336h40"/></g><circle cx="318" cy="368" r="10" fill="#35c08a" transform="rotate(-8 300 340)"/></g>
+      <path d="M330 392l14-110h190l14 110z" fill="#cfd9e6"/><rect x="346" y="290" width="172" height="96" rx="8" fill="#fff"/><g fill="#9cc9f5"><rect x="364" y="340" width="16" height="30" rx="3"/><rect x="390" y="322" width="16" height="48" rx="3"/><rect x="416" y="332" width="16" height="38" rx="3"/><rect x="442" y="304" width="16" height="66" rx="3" fill="#2f8fe8"/></g><rect x="470" y="306" width="36" height="8" rx="4" fill="#dfe9f4"/><rect x="470" y="322" width="28" height="8" rx="4" fill="#dfe9f4"/>
+      <rect x="310" y="388" width="260" height="14" rx="7" fill="#b9c6d6"/></svg>
+    <div class="fl" style="right:-14px;top:12%">Est. monthly EMI<b>AED <span id="chipEmi">1,240</span></b></div>
+    <div class="fl" style="left:-12px;bottom:10%;animation-delay:-2s">Eligibility<b style="color:#1b8a55">✓ Likely</b></div>
+  </div>
+</div></section>
+
+<section id="bank"><div class="wrap">
+  <div class="st rv"><span class="ey">🏦 Bank accounts</span><h2>Banking That Fits How You Manage Money</h2><p>Explore business bank accounts from UAE banks and compare account fees, minimum balance requirements and everyday banking features side by side.</p></div>
+  <div class="scene rev">
+    <div class="pic rv" data-par>
+      <svg class="bg" viewBox="0 0 640 460" role="img" aria-label="Illustration: a tablet showing a bank account app beside a coffee cup and plant">
+        <defs><linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff1de"/><stop offset=".6" stop-color="#eaf6f4"/><stop offset="1" stop-color="#e3eeff"/></linearGradient><linearGradient id="bal" x1="0" x2="1"><stop offset="0" stop-color="#2f6fe0"/><stop offset="1" stop-color="#7a6cf3"/></linearGradient></defs>
+        <rect width="640" height="460" fill="url(#bg2)"/><path d="M380 0h120L380 330H250z" fill="#fff" opacity=".35"/><path d="M520 0h70L470 330h-60z" fill="#fff" opacity=".28"/>
+        <rect y="350" width="640" height="110" fill="#e9d6bd"/><rect y="350" width="640" height="8" fill="#dcc6a7"/>
+        <g><ellipse cx="90" cy="345" rx="60" ry="10" fill="#d2b995" opacity=".6"/><path d="M52 290h76l-10 58H62z" fill="#f4ede3" stroke="#e6dac7" stroke-width="3"/>
+        <g class="leaf" fill="#6dbf8f"><path d="M90 290C60 250 50 200 70 150 100 190 110 250 90 290Z"/><path d="M90 290C110 240 150 220 175 205 160 250 130 280 90 290Z" fill="#8fd3a9"/><path d="M90 290C60 270 25 270 8 240 45 235 80 250 90 290Z" fill="#59b07e"/></g></g>
+        <rect x="205" y="60" width="230" height="300" rx="30" fill="#233350"/><rect x="215" y="70" width="210" height="280" rx="22" fill="#fff"/><rect x="262" y="338" width="116" height="9" rx="4" fill="#3a4b6a"/>
+        <text x="232" y="102" font-family="Outfit" font-weight="700" font-size="14" fill="#14283f">Bank Accounts</text><rect x="232" y="112" width="60" height="4" rx="2" fill="#2f8fe8"/>
+        <rect x="230" y="128" width="180" height="84" rx="16" fill="url(#bal)"/><text x="246" y="152" font-size="10" fill="#dbe6ff" font-family="Nunito Sans">Total balance</text><text x="246" y="182" font-size="21" fill="#fff" font-weight="800" font-family="Outfit">AED 85,430.00</text><path d="M330 196l16-10 14 6 20-18" stroke="#9ff0c9" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <g font-family="Nunito Sans" font-size="11" fill="#5a6e85"><text x="232" y="238">Savings</text><text x="352" y="238" fill="#14283f" font-weight="700">AED 56,200</text><text x="232" y="262">Current</text><text x="352" y="262" fill="#14283f" font-weight="700">AED 29,230</text><text x="232" y="286">Transfer</text><text x="352" y="286" fill="#1b8a55" font-weight="700">+ 4,000</text></g>
+        <g stroke="#e7eff7" stroke-width="2"><path d="M230 246h180M230 270h180"/></g><g fill="#cfe2f7"><circle cx="248" cy="318" r="7"/><circle cx="288" cy="318" r="7"/><circle cx="328" cy="318" r="7"/><circle cx="368" cy="318" r="7"/></g>
+        <g><ellipse cx="510" cy="352" rx="72" ry="14" fill="#f7efe3"/><path d="M468 296h84l-8 50c-2 12-12 18-24 18h-20c-12 0-22-6-24-18z" fill="#fff" stroke="#e7dccb" stroke-width="3"/><path d="M552 308c22-2 22 30 0 30" fill="none" stroke="#e7dccb" stroke-width="7"/><ellipse cx="510" cy="298" rx="42" ry="7" fill="#9a6a47"/>
+        <g stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" opacity=".9"><path class="steam" d="M495 280c-8-14 8-18 0-32"/><path class="steam" style="animation-delay:-1s" d="M515 280c-8-14 8-18 0-32"/><path class="steam" style="animation-delay:-2s" d="M535 280c-8-14 8-18 0-32"/></g></g>
+        <rect x="548" y="388" width="70" height="46" rx="6" fill="#e3c7a2" transform="rotate(8 583 411)"/><rect x="556" y="392" width="6" height="42" fill="#c6a27a" transform="rotate(8 583 411)"/></svg>
+      <div class="fl" style="left:-14px;top:14%">New account<b style="color:#1b8a55">+ AED 4,000</b></div>
+    </div>
+    <div class="pn rv" style="--d:.15s"><div class="i" style="font-size:2rem">🏦</div><h3>Business Bank Accounts</h3><p style="color:var(--mute)">Explore banking options designed for companies and entrepreneurs.</p><b style="display:block;margin-top:18px">Suitable for:</b>
+      <ul class="ticks"><li>New and existing UAE businesses</li><li>SMEs and growing companies</li><li>Businesses with local or international banking needs</li><li>Entrepreneurs looking for a business account</li></ul><a class="btn g" data-mag href="#faq">Explore Business Banking</a></div>
+  </div>
+</div></section>
+
+<section class="band" id="calc"><div class="wrap">
+  <div class="st rv"><span class="ey">🧮 Financial calculators</span><h2>Make the Numbers Easier to Understand</h2><p>Use FinShark’s financial calculators to estimate loan repayments, credit card interest and debt burden ratio – practical tools that help you understand financial commitments and compare options before you apply.</p></div>
+  <div class="cg"><div class="cl" id="cl"></div>
+    <div class="cp rv" id="cp"><h3 id="ct"></h3><div id="cs"></div><div class="out"><small id="cu"></small><b id="co">–</b><div class="pb"><i id="cbar"></i></div><small id="cn"></small></div></div></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="st rv ctr"><span class="ey">🌊 How it works</span><h2>The FinShark journey</h2></div>
+  <div class="jr"><svg class="jl" viewBox="0 0 1000 6" preserveAspectRatio="none"><path d="M60 3H940"/></svg>
+    <div class="js rv"><div class="n">1</div><h3>Find your options</h3><p>Tell us your profile, preferences and what you are looking for – cashback, travel, dining, Islamic or business options.</p></div>
+    <div class="js rv" style="--d:.15s"><div class="n">2</div><h3>Select what suits you</h3><p>Review options based on your profile. Understand fees, benefits and eligibility criteria before you decide.</p></div>
+    <div class="js rv" style="--d:.3s"><div class="n">3</div><h3>Apply with clarity</h3><p>Submit your enquiry and continue with our authorised fulfilment partner for the next steps. Final approval is subject to issuer criteria.</p></div></div>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <div class="st rv ctr"><h2>Why People Use FinShark</h2></div>
+  <div class="wy"><div class="wc" id="w1"></div>
+    <div class="aq rv" id="aq"><svg viewBox="0 0 300 340" role="img" aria-label="FinShark mascot at a laptop">
+      <ellipse cx="150" cy="324" rx="90" ry="9" fill="#bfd9f2"/><rect x="66" y="238" width="176" height="10" rx="5" fill="#33476a"/><rect x="80" y="248" width="8" height="72" fill="#33476a"/><rect x="220" y="248" width="8" height="72" fill="#33476a"/>
+      <path d="M120 162h68l20 78H100z" fill="#27457a"/><path d="M140 162l14 26 14-26z" fill="#fff"/><path d="M154 188l-5 30h10z" fill="#2f8fe8"/>
+      <path class="fin" d="M104 198c-26 6-40 22-46 42 22-8 38-6 54 0z" fill="#7cc0f7"/>
+      <path d="M134 206l20-30h66l-18 30z" fill="#d3dbe8"/><rect x="128" y="206" width="94" height="8" rx="4" fill="#e6ecf4"/>
+      <ellipse cx="154" cy="104" rx="66" ry="62" fill="#7cc0f7"/><path d="M148 42c4-26 24-38 44-36-16 8-20 20-18 36z" fill="#4a9aec"/>
+      <path d="M108 122c16 26 60 26 76 0-20 10-56 10-76 0z" fill="#fff"/>
+      <circle cx="128" cy="96" r="16" fill="#fff" stroke="#14283f" stroke-width="3.5"/><circle cx="178" cy="96" r="16" fill="#fff" stroke="#14283f" stroke-width="3.5"/><path d="M144 96h18" stroke="#14283f" stroke-width="3.5"/><circle cx="131" cy="97" r="5.5" fill="#14283f"/><circle cx="175" cy="97" r="5.5" fill="#14283f"/>
+      <path d="M126 128q28 20 56 0" stroke="#14283f" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg></div>
+    <div class="wc" id="w2"></div></div>
+</div></section>
+
+<section id="articles"><div class="wrap">
+  <div class="st rv"><span class="ey">📰 Articles & insights</span><h2>Learn Before You Apply</h2><p>Read practical financial guides covering credit cards, personal loans, bank accounts and debt management – written to help UAE residents make informed decisions.</p></div>
+  <div class="ar" id="ar"></div>
+</div></section>
+
+<section class="band" id="faq"><div class="wrap fq">
+  <div class="st rv ctr"><h2>Frequently Asked Questions</h2></div>
+  <input class="fs" id="fs" type="search" placeholder="Search questions…" aria-label="Search questions"><div id="fl"></div><p class="none" id="fn" style="display:none">No question matches your search. Try another word.</p>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="fg">
+    <div><h4>Products</h4><a href="#cards">Credit Cards in UAE</a><a href="#loans">Personal Loans in UAE</a><a href="#loans">Car Loans in UAE</a><a href="#loans">Home Loans in UAE</a><a href="#bank">Business Loans in UAE</a><a href="#bank">Bank Accounts in UAE</a></div>
+    <div><h4>Tools & Calculators</h4><a href="#cards">Find My Card</a><a href="#calc">Financial Calculators</a><a href="#calc">Personal Loan EMI Calculator</a><a href="#calc">Auto Loan Calculator</a><a href="#calc">Mortgage Calculator</a><a href="#calc">Currency Converter</a><a href="#calc">Gold Rate in UAE</a><a href="#calc">Silver Rate in UAE</a></div>
+    <div><h4>Learn</h4><a href="#articles">Financial Glossary</a><a href="#articles">Articles</a></div>
+    <div><h4>Company</h4><a href="#home">Home</a><a href="#faq">About FinShark</a></div>
+    <div><h4>Support</h4><a href="#faq">Contact Us</a><a href="#faq">Help Center</a><a href="#faq">Legal & Admin Policies</a></div></div>
+  <div class="nl"><div style="display:flex;gap:14px;align-items:center"><svg width="46" height="46" viewBox="0 0 40 40"><path d="M3 36C6 18 14 8 24 3c0 9 5 20 13 33z" fill="#2f8fe8"/></svg><b>Join the SharkWave – fun updates, zero boring stuff.</b></div>
+    <form id="nf"><input type="email" required placeholder="Email address" aria-label="Email address"><button class="btn p" type="submit">Subscribe</button></form>
+    <div class="soc"><span>Follow the Shark on</span><a href="#home" aria-label="TikTok">Tk</a><a href="#home" aria-label="Instagram">Ig</a><a href="#home" aria-label="LinkedIn">in</a><a href="#home" aria-label="X">X</a></div></div>
+  <p class="cp2">© 2026 FinShark. Final approval is subject to issuer criteria.</p></div></footer>
+<button id="top" aria-label="Back to top">↑</button><div id="toast" role="status"></div>
+
+<script>
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)],RM=matchMedia('(prefers-reduced-motion:reduce)').matches,HV=matchMedia('(hover:hover)').matches,f=n=>Math.round(n).toLocaleString('en-US');
+function bubbles(el,n){for(let i=0;i<n;i++){const b=document.createElement('i');b.className='bub';const s=8+Math.random()*26;b.style.cssText=`width:${s}px;height:${s}px;left:${Math.random()*100}%;animation-duration:${9+Math.random()*10}s;animation-delay:-${Math.random()*14}s;--dx:${(Math.random()-.5)*80}px`;el.appendChild(b)}}
+bubbles($('#hb'),14);bubbles($('#aq'),9);
+// bento + look
+const B=[['💳','Credit Cards','Compare cards based on how you spend','#cards','#ece8ff','linear-gradient(135deg,#ece8ff,#dcecff 60%,#fff)',['Compare fees & rewards','Cashback, travel & dining','Welcome offers'],['🎁 Rewards','✈️ Miles','💰 Cashback']],
+['💸','Personal Loans','Explore personal financing options','#loans','#d8f3f6','linear-gradient(135deg,#d6f3f6,#e6f4ff 60%,#fff)',['Minimum salary','Interest rates','Repayment periods'],['🧮 EMI','🛡️ Eligibility','📅 Tenure']],
+['🚗','Car Loans','Finance your next vehicle','#calc','#ffe9d6','linear-gradient(135deg,#ffe9d6,#fff3df 60%,#fff)',['Auto financing options','Compare repayment periods','Car Loan EMI Calculator'],['🔧 New & used','🧮 EMI','📅 Tenure']],
+['🏡','Home Loans','Explore mortgage options','#calc','#dff7ea','linear-gradient(135deg,#dff7ea,#e3f3ff 60%,#fff)',['Mortgage options','Plan longer tenures','Mortgage Calculator'],['🏠 Property','🧮 EMI','📅 Long tenure']],
+['🔐','Bank Accounts','Personal banking options','#bank','#dcecff','linear-gradient(135deg,#dcecff,#ece8ff 60%,#fff)',['Personal banking options','Compare account fees','Minimum balance'],['🏦 Savings','💳 Current','📱 App banking']],
+['💼','Business Banking','Banking solutions for businesses','#bank','#ffe6ec','linear-gradient(135deg,#ffe6ec,#fff0e6 60%,#fff)',['New & existing UAE businesses','SMEs and growing companies','Local & international needs'],['🌍 Global','🏢 SME','🚀 Startups']],
+['🧮','Calculators','Estimate EMIs, interest and DBR','#calc','#e6f7d8','linear-gradient(135deg,#e6f7d8,#d6f3f6 60%,#fff)',['EMI & Mortgage','Card interest & minimum payment','Debt burden ratio'],['⚖️ DBR','％ Interest','🧾 EMI']]];
+$('#tabs').insertAdjacentHTML('beforeend',B.map((b,i)=>`<button class="tb" role="tab" id="tb${i}" aria-controls="ep${i}" data-i="${i}"><span class="e">${b[0]}</span>${b[1]}</button>`).join(''));
+$('#exs').insertAdjacentHTML('afterbegin',B.map((b,i)=>`<div class="ep" id="ep${i}" role="tabpanel" aria-labelledby="tb${i}" style="background:${b[5]}"><div class="t"><span class="ct">${b[0]} Explore</span><h3>${b[1]}</h3><p>${b[2]}.</p><ul class="hl">${b[6].map(x=>`<li>${x}</li>`).join('')}</ul><a class="btn p" data-mag href="${b[3]}">Know More</a></div><div class="vz"><i class="rg"></i><i class="rg b"></i><div class="core">${b[0]}</div>${b[7].map((c,k)=>`<span class="o" style="--k:${k}"><span class="ch">${c}</span></span>`).join('')}</div></div>`).join(''));
+let ei=0;const TB=$$('.tb'),EP=$$('.ep'),ind=$('#ind'),tabs=$('#tabs'),pbar=$('#pbar');
+function moveInd(){const t=TB[ei];ind.style.left=t.offsetLeft+'px';ind.style.width=t.offsetWidth+'px'}
+function ex(i){ei=(i+B.length)%B.length;TB.forEach((b,k)=>{b.classList.toggle('on',k===ei);b.setAttribute('aria-selected',k===ei);b.tabIndex=k===ei?0:-1});EP.forEach((p,k)=>p.classList.toggle('on',k===ei));moveInd();const t=TB[ei];tabs.scrollTo({left:t.offsetLeft-(tabs.clientWidth-t.offsetWidth)/2,behavior:RM?'auto':'smooth'});$('#pg').textContent=(ei+1)+' / '+B.length;pbar.style.animation='none';void pbar.offsetWidth;pbar.style.animation=''}
+TB.forEach(b=>b.onclick=()=>ex(+b.dataset.i));pbar.onanimationend=()=>ex(ei+1);$('#exprev').onclick=()=>ex(ei-1);$('#exnext').onclick=()=>ex(ei+1);
+tabs.onkeydown=e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();ex(ei+(e.key==='ArrowRight'?1:-1));TB[ei].focus({preventScroll:true})}};
+(()=>{const z=$('#exs');let x0=null;z.onpointerdown=e=>{x0=e.clientX};z.onpointerup=e=>{if(x0!==null&&Math.abs(e.clientX-x0)>60)ex(ei+(e.clientX<x0?1:-1));x0=null};
+ if(HV&&!RM)z.onpointermove=e=>{const v=$$('.vz')[ei],r=z.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;$('.core',v).style.cssText=`--rx:${-y*14}deg;--ry:${x*14}deg`}})();
+addEventListener('resize',moveInd);ex(0);document.fonts&&document.fonts.ready.then(moveInd);
+const L=[['💳','Find a Credit Card','Compare cards based on income, spending and preferences.','#cards','#ece8ff'],['💸','Explore Personal Loans','Understand loan options and repayments.','#loans','#d8f3f6'],['🏦','Find a Bank Account','Explore personal and business banking options.','#bank','#ffe9d6'],['🧮','Use Financial Calculators','Estimate EMIs, interest and debt burden ratio.','#calc','#dff7ea']];
+$('#look').innerHTML=L.map((l,i)=>`<a class="lk rv" style="--c:${l[4]};--d:${i*.08}s" href="${l[3]}"><div class="i">${l[0]}</div><h3 style="font-size:1.3rem">${l[1]}</h3><p>${l[2]}</p><span class="mo">Know More <span>→</span></span></a>`).join('');
+// featured cards + filters
+const FC=[['Citi Premier','linear-gradient(135deg,#5c6a82,#252d3c)','Citi Premier Card','Sign up for Citi Premier Credit Card and enjoy flexible rewards & benefits.','15,000','AED 750','Welcome offer','AED 350 cash back welcome offer (statement credit)','$1 = 3 points on dining, fuel & grocery spend (AED)',['Rewards','Travel','Premium']],
+['FAB Cashback','linear-gradient(135deg,#59d0ee,#3a8fe6)','FAB Cashback Card','Get up to 5% cashback on dining, fashion and supermarkets, plus 3% on eligible spend.','AED 5,000+','AED 300','Welcome offer','Up to AED 1,000 cashback every month','5% cashback on eligible supermarket spending, credited as 17 FAB Rewards points',['Cashback','Rewards']],
+['FAB Elite','linear-gradient(135deg,#46495a,#161922)','FAB Elite Credit Card','Earn premium FAB Rewards and enjoy beach clubs, dining, concierge, lounge access.','AED 40,000','AED 1,200','No annual membership offer','First year free','Earn 20 FAB Rewards per AED 1 on eligible luxury-brand spending.',['Premium','Travel','Rewards']],
+['Citi Cash Back','linear-gradient(135deg,#2f7be0,#4ec8e8)','Citi Cash Back Card','Enjoy automatic cash back on all purchases with Citi Cash Back Credit Card.','AED 8,000','AED 300','No annual membership offer','No AMF for year 1','3% on non-AED spend',['Cashback','Zero / Low Fee']]];
+$('#rail').innerHTML=FC.map(c=>`<article class="fc" data-t="${c[9].join('|')}"><div class="pl" style="background:${c[1]}"><span>${c[0]}</span><span style="letter-spacing:.22em;font-weight:500">•••• ••••</span></div><h4>${c[2]}</h4><p class="d">${c[3]}</p><div class="kv"><div>Minimum salary<b>${c[4]}</b></div><div>Annual fee<b>${c[5]}</b></div></div><div class="of"><small>${c[6]}</small>${c[7]}</div><div class="kr"><b>Key reward</b>${c[8]}</div><div class="act"><a class="btn g" href="#faq">View Details</a><a class="btn p" href="#faq">Apply Now</a></div></article>`).join('')+'<p class="none" id="rn">No featured card for this preference yet. Try Find My Card to explore more.</p>';
+const CH=['All','Cashback','Travel','Rewards','Zero / Low Fee','Premium','Balance Transfer','Islamic','Business'];
+$('#chips').innerHTML=CH.map((c,i)=>`<button class="chip${i?'':' on'}">${c}</button>`).join('');
+function filt(t){$$('.chip').forEach(c=>c.classList.toggle('on',c.textContent===t));let n=0;$$('.fc').forEach(c=>{const ok=t==='All'||c.dataset.t.split('|').includes(t);c.classList.toggle('out',!ok);if(ok)n++});$('#rn').style.display=n?'none':'block';$('#rail').scrollLeft=0}
+$$('.chip').forEach(c=>c.onclick=()=>filt(c.textContent));
+$('#pf').innerHTML=[['💰','Cashback','#fff0c9'],['✈️','Travel','#d6ecff'],['⭐','Rewards','#ece8ff'],['🪶','Zero / Low Fee','#dff7ea'],['👑','Premium','#ffe6ec'],['🔁','Balance Transfer','#d8f3f6'],['🕌','Islamic','#e6f7d8'],['💼','Business','#ffe9d6']].map(p=>`<button class="pf rv" style="--c:${p[2]}" data-t="${p[1]}"><span>${p[0]}</span>${p[1]}</button>`).join('');
+$$('.pf').forEach(p=>p.onclick=()=>{filt(p.dataset.t);$('#cards').scrollIntoView({behavior:'smooth'});toast('Showing: '+p.dataset.t)});
+// drag rail
+(()=>{const r=$('#rail');let d=0,x=0,s=0;r.onpointerdown=e=>{if(e.pointerType!=='mouse')return;d=1;x=e.clientX;s=r.scrollLeft;r.classList.add('dr')};addEventListener('pointermove',e=>{if(d)r.scrollLeft=s-(e.clientX-x)});addEventListener('pointerup',()=>{d=0;r.classList.remove('dr')})})();
+// calculators
+const CS=[['Personal Loan EMI Calculator','🧾','Estimate monthly repayments','emi',[['Loan amount',10000,1000000,5000,100000,'AED '],['Interest rate (yearly)',2,20,.1,6.5,'%'],['Tenure',6,84,6,48,' months']]],
+['Car Loan EMI Calculator','🚘','Compare auto financing options','emi',[['Car loan amount',20000,500000,5000,90000,'AED '],['Interest rate (yearly)',2,12,.1,4.5,'%'],['Tenure',12,60,6,48,' months']]],
+['Mortgage Calculator','🏠','Plan your home financing','emi',[['Property loan',300000,5000000,10000,1200000,'AED '],['Interest rate (yearly)',2,8,.1,4.2,'%'],['Tenure',60,300,12,240,' months']]],
+['Credit Card Minimum Payment','💳','Understand minimum due','min',[['Outstanding balance',1000,100000,500,12000,'AED '],['Minimum percentage',1,10,.5,5,'%']]],
+['Credit Card Interest Calculator','％','Estimate finance charges','int',[['Outstanding balance',1000,100000,500,12000,'AED '],['Annual rate (APR)',20,45,.5,36,'%'],['Days unpaid',1,90,1,30,' days']]],
+['DBR Calculator','⚖️','Estimate your debt burden ratio','dbr',[['Monthly income',3000,100000,500,18000,'AED '],['Existing monthly debts',0,50000,100,2500,'AED '],['New loan instalment',0,30000,100,2000,'AED ']]]];
+let ac=0;$('#cl').innerHTML=CS.map((c,i)=>`<button class="cb rv" style="--d:${i*.06}s" data-i="${i}"><span class="i">${c[1]}</span><span><b>${c[0]}</b><small>${c[2]}</small></span></button>`).join('');
+let shown=0;
+function calc(k=true){const c=CS[ac],v=$$('#cs input').map(i=>+i.value);let m,s,u,p;
+ $$('#cs label span').forEach((e,i)=>{const d=c[4][i];e.textContent=d[5]==='AED '?'AED '+f(v[i]):(d[5]==='%'?v[i].toFixed(1)+'%':v[i]+d[5])});
+ if(c[3]==='emi'){const r=v[1]/1200,n=v[2],e=v[0]*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1),t=e*n;m=e;u='Estimated monthly repayment';s=`Total AED ${f(t)} · interest AED ${f(t-v[0])}`;p=v[0]/t*100;$('#chipEmi').textContent=f(e)}
+ else if(c[3]==='min'){m=Math.max(100,v[0]*v[1]/100);u='Minimum payment due';s='Paying only the minimum keeps interest running on the rest.';p=v[1]*10}
+ else if(c[3]==='int'){m=v[0]*v[1]/100/365*v[2];u='Estimated finance charge';s=`On AED ${f(v[0])} at ${v[1]}% for ${v[2]} days`;p=Math.min(100,m/v[0]*400)}
+ else{m=(v[1]+v[2])/v[0]*100;u='Your debt burden ratio';s=m<=50?'Within the commonly used 50% guideline.':'Above the commonly used 50% guideline – lenders may be cautious.';p=Math.min(100,m*1.4)}
+ const o=$('#co'),a=shown,b=m,t0=performance.now(),pc=c[3]==='dbr';(function st(t){const q=Math.min(1,(t-t0)/500),x=a+(b-a)*q;o.textContent=pc?x.toFixed(1)+'%':'AED '+f(x);if(q<1)requestAnimationFrame(st)})(t0);shown=m;
+ $('#cu').textContent=u;$('#cn').textContent=s;$('#cbar').style.width=p+'%'}
+function pick(i){ac=i;shown=0;$$('.cb').forEach((b,k)=>b.classList.toggle('on',k===i));const c=CS[i];$('#ct').textContent=c[0];$('#cs').innerHTML=c[4].map(d=>`<div class="sr"><label>${d[0]}<span></span></label><input type="range" min="${d[1]}" max="${d[2]}" step="${d[3]}" value="${d[4]}"></div>`).join('');$$('#cs input').forEach(x=>x.oninput=calc);calc()}
+$$('.cb').forEach(b=>b.onclick=()=>pick(+b.dataset.i));pick(0);
+// why
+const W=[['🧩','Explore in one place','Discover different financial product categories without jumping between multiple websites.','#ece8ff'],['⚖️','Compare what matters','Review important information such as fees, income requirements, rewards and benefits.','#d8f3f6'],['🛠️','Useful financial tools','Use calculators and discovery tools to better understand your options.','#ffe9d6'],['📍','Built for the UAE','FinShark focuses on financial products relevant to UAE residents and businesses.','#dff7ea']];
+const wh=(w,i)=>`<div class="w rv" style="--d:${i*.12}s"><div class="i" style="background:${w[3]}">${w[0]}</div><h4>${w[1]}</h4><p>${w[2]}</p></div>`;
+$('#w1').innerHTML=W.slice(0,2).map(wh).join('');$('#w2').innerHTML=W.slice(2).map((w,i)=>wh(w,i+2)).join('');
+// articles
+$('#ar').innerHTML=[['✈️','linear-gradient(135deg,#e6ddff,#f3ebff)','Credit Cards','Airport Lounge Access with UAE Credit Cards: What You Need to Know in 2026','An airport lounge benefit depends on your exact card, network, app registration and issuer conditions.','4 min read'],['📑','linear-gradient(135deg,#d3f1f6,#e6f4ff)','Personal Loans','Personal Loans in UAE: What to Compare Before You Sign','A low monthly instalment does not automatically mean a cheaper personal loan. Compare the total cost, tenure, fees and repayment terms before signing.','5 min read'],['0️⃣','linear-gradient(135deg,#ffe8d9,#fff5dc)','Credit Cards','Zero Annual Fee Credit Cards in UAE: Are They Really Free?','A zero annual fee credit card can reduce one recurring cost, but that does not make the card completely free. Other fees and conditions still matter.','5 min read']].map((a,i)=>`<a class="art rv" style="--d:${i*.12}s" href="#articles"><div class="th" style="background:${a[1]}"><i style="width:120px;height:120px;left:-30px;top:-30px"></i><i style="width:80px;height:80px;right:20px;bottom:-20px;animation-delay:-2s"></i><span>${a[0]}</span></div><div class="b"><span class="tg">${a[2]}</span><h3>${a[3]}</h3><p>${a[4]}</p><small>${a[5]}</small><span class="mo">Read article <span>→</span></span></div></a>`).join('');
+// faq
+const Q=[['What is FinShark?','FinShark is a UAE financial discovery platform to explore and compare credit cards, loans, bank accounts and calculators in one place.'],['What financial products can I explore on FinShark?','You can explore credit cards, personal loans, car loans, home loans, bank accounts, business banking and financial calculators.'],['Can I compare credit cards on FinShark?','Yes. Compare annual fees, minimum income requirements, welcome offers and rewards across cashback, travel, dining and everyday spending.'],['How does Find My Card work?','Tell us your profile and preferences, and Find My Card narrows the list to cards that fit how you spend.'],['What should I consider before applying for a credit card?','Check the annual fee, minimum salary, interest and finance charges, rewards, and any conditions attached to offers.'],['Can I explore loans and bank accounts on FinShark?','Yes. You can explore personal, car and home loans, plus personal and business bank accounts.'],['What financial calculators are available on FinShark?','FinShark provides tools including Personal Loan EMI, Car Loan EMI, Mortgage, Credit Card Minimum Payment, Credit Card Interest and Debt Burden Ratio calculators to help you better understand financial commitments and repayment estimates.'],['Does using FinShark guarantee that my application will be approved?','No. Final approval is always subject to the issuer’s criteria.'],['Does FinShark issue credit cards, loans or bank accounts?','No. FinShark helps you discover options; products are issued by banks and financial institutions.'],['Can product fees, rates, benefits and eligibility requirements change?','Yes. Banks can update them at any time, so always confirm the latest terms with the provider before applying.']];
+$('#fl').innerHTML=Q.map((q,i)=>`<div class="q"><button aria-expanded="false" aria-controls="a${i}">${q[0]}<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="an" id="a${i}"><div><p>${q[1]}</p></div></div></div>`).join('');
+$$('.q button').forEach(b=>b.onclick=()=>{const q=b.parentElement,o=q.classList.contains('open');$$('.q.open').forEach(x=>{x.classList.remove('open');$('button',x).setAttribute('aria-expanded','false')});if(!o){q.classList.add('open');b.setAttribute('aria-expanded','true')}});
+$('#fs').oninput=e=>{const t=e.target.value.toLowerCase().trim();let n=0;$$('.q').forEach(q=>{const h=!q.textContent.toLowerCase().includes(t);q.classList.toggle('hid',h);if(!h)n++});$('#fn').style.display=n?'none':'block'};
+// rotating headline
+const trk=$('#trk');trk.appendChild(trk.firstElementChild.cloneNode(true));const RN=trk.children.length-1;let ri=0;
+function setRot(i,anim=true){ri=i;trk.style.transition=anim?'transform .75s cubic-bezier(.7,0,.2,1)':'none';trk.style.transform=`translateY(-${ri*100/(RN+1)}%)`}
+setInterval(()=>{if(document.hidden)return;setRot(ri+1);if(ri===RN)setTimeout(()=>setRot(0,false),800)},2700);
+$$('#seg button').forEach(b=>b.onclick=()=>{$$('#seg button').forEach(x=>x.classList.toggle('on',x===b));setRot(+b.dataset.i)});
+// hero slider
+const HS=[['Now Available','FAB Credit Cards','Explore rewards, cashback & more','#featured',['linear-gradient(135deg,#3b7cf0,#8d86f8)','linear-gradient(135deg,#19b4cf,#5f9bf5)'],'FAB',['4821','7710'],['Platinum','Rewards'],['🎁 Rewards','💰 Cashback']],
+['Cashback · Travel · Rewards','Find Your Perfect Credit Card','Cashback, travel or rewards – all in one place','#prefs',['linear-gradient(135deg,#f5b54a,#f08a5d)','linear-gradient(135deg,#ffd27a,#f0a64a)'],'GOLD',['1290','3305'],['Gold','Travel'],['✈️ Travel','⭐ Rewards']],
+['Now Available','Citi Credit Cards','Explore benefits, rewards & more','#featured',['linear-gradient(135deg,#2f7be0,#5ec9e8)','linear-gradient(135deg,#4b5670,#232b3f)'],'citi',['5562','0931'],['Cash Back','Premier'],['🏷️ Benefits','🎁 Rewards']]];
+$('#slides').innerHTML=HS.map(h=>`<div class="sl" role="group"><div class="vis"><span class="tag">${h[0]}</span>${[0,1].map(k=>`<span class="cw ${'ab'[k]}"><div class="cd" style="--g:${h[4][k]}"><span class="br">${h[5]}</span><span class="chp"></span><span class="nm">•••• ${h[6][k]}</span><span class="nt">${h[7][k]}</span></div></span>`).join('')}<span class="fch" style="right:6%;top:12%">${h[8][0]}</span><span class="fch" style="left:8%;bottom:5%;animation-delay:-2s">${h[8][1]}</span></div><div class="tx"><h3>${h[1]}</h3><p>${h[2]}</p><a class="btn p sm" data-mag href="${h[3]}">Apply Now</a></div></div>`).join('');
+$('#story').innerHTML=HS.map(()=>'<i><b></b></i>').join('');
+const SL=$$('.sl'),ST=$$('#story i');let ci=0;
+function go(i){ci=(i+SL.length)%SL.length;SL.forEach((s,k)=>s.classList.toggle('on',k===ci));ST.forEach((s,k)=>{s.className=k<ci?'done':k===ci?'on':'';const b=$('b',s);b.style.animation='none';void b.offsetWidth;b.style.animation=''})}
+ST.forEach(s=>$('b',s).onanimationend=()=>go(ci+1));
+$('.nx.l').onclick=()=>go(ci-1);$('.nx.r').onclick=()=>go(ci+1);go(0);
+(()=>{const sg=$('#stage');let x0=null;sg.onpointerdown=e=>{x0=e.clientX};sg.onpointerup=e=>{if(x0!==null&&Math.abs(e.clientX-x0)>60)go(ci+(e.clientX<x0?1:-1));x0=null};
+ sg.onkeydown=e=>{if(e.key==='ArrowRight')go(ci+1);if(e.key==='ArrowLeft')go(ci-1)};
+ if(HV&&!RM){sg.onpointermove=e=>{const r=sg.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;$$('.cd',sg).forEach((c,k)=>{c.style.setProperty('--px',x*(k%2?-18:22)+'px');c.style.setProperty('--py',y*(k%2?-14:16)+'px')})};sg.onpointerleave=()=>$$('.cd',sg).forEach(c=>{c.style.setProperty('--px','0px');c.style.setProperty('--py','0px')})}})();
+// magnetic buttons, glow, tilt
+if(HV&&!RM){$$('[data-mag]').forEach(b=>{b.onpointermove=e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.22}px,${(e.clientY-r.top-r.height/2)*.35}px)`};b.onpointerleave=()=>b.style.transform=''});
+ const g=$('#glow');addEventListener('pointermove',e=>{g.style.left=e.clientX+'px';g.style.top=e.clientY+'px'},{passive:true});
+ $('#rail').addEventListener('pointermove',e=>{const c=e.target.closest('.fc');if(!c)return;const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(900px) rotateY(${x*8}deg) rotateX(${-y*8}deg) translateY(-6px)`});
+ $('#rail').addEventListener('pointerout',e=>{const c=e.target.closest('.fc');if(c)c.style.transform=''})}
+// scroll: progress, nav hide, parallax pictures, back-to-top
+const nav=$('#nav'),bar=$('#bar'),tp=$('#top');let ly=0;
+addEventListener('scroll',()=>{const y=scrollY,h=document.documentElement;bar.style.width=y/(h.scrollHeight-innerHeight)*100+'%';nav.classList.toggle('hide',y>ly&&y>300&&!$('#links').classList.contains('open'));ly=y;tp.classList.toggle('on',y>700);
+ if(!RM)$$('[data-par]').forEach(p=>{const r=p.getBoundingClientRect(),k=(r.top+r.height/2-innerHeight/2)/innerHeight;p.style.translate=`0 ${k*-26}px`})},{passive:true});
+tp.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+$('#bg').onclick=e=>{const o=$('#links').classList.toggle('open');e.currentTarget.setAttribute('aria-expanded',o)};$$('#links a').forEach(a=>a.addEventListener('click',()=>$('#links').classList.remove('open')));
+// section highlight in nav
+const io2=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)$$('#links a:not(.btn)').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});['cards','loans','bank','articles'].forEach(i=>io2.observe($('#'+i)));
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});$$('.rv').forEach(e=>io.observe(e));
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('on'),2600)}
+$('#nf').onsubmit=e=>{e.preventDefault();toast('You’re on the SharkWave. Check your inbox.');e.target.reset()};
+</script>
+</body>
+</html>
